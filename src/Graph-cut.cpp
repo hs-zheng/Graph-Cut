@@ -1,3 +1,8 @@
+/*
+ 作者 郑鸿昇
+ 创建日期 2015/5/9 21:25
+ 备注 使用grabcut进行
+ */
 #include "Graph-cut.h"
 
 // 重置变量
@@ -19,7 +24,7 @@ void GraphCut::reset() {
 }
 
 // 设置图片和窗口名
-void GraphCut::setImageAndWinName(const Mat & image, const string & winName) {
+void GraphCut::setImageAndWinName(const Mat &image, const string & winName) {
     if (image.empty() || winName.empty()) {
         cout<< "设置图片和窗口名失败， 请检查是否传入空值！！！ ";
         return ;
@@ -31,7 +36,7 @@ void GraphCut::setImageAndWinName(const Mat & image, const string & winName) {
 }
 
 void GraphCut::showImage() const {
-    if (_image->empty() || _winName->empty()) {
+    if (_image->empty() || _winName == NULL) {
         cout<< "图片或窗口名为空， 请检查！！！ ";
         return;
     }
